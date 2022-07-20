@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header } from './component/header';
-import { List } from './component/List/list';
-
+import catalog from "./catalog.json";
+import { MainMenu } from './component/mainMenu';
 
 export const App = () => {
+  const [catalogList , SetCatalogList] = useState(catalog);
+
+  useEffect(()=>{
+      SetCatalogList(catalog);
+  },[catalogList]);
+  
+  
   return (
     <div>
       <Header/>
-      <List/>
+      <MainMenu
+      list={catalogList}
+      />
     </div>
   );
 }

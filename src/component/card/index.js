@@ -8,30 +8,30 @@ import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import catalog from "../../catalog.json";
+import "./style.css";
 
-export const CardItem = () => {
+export const CardItem = ({name,price,data,image}) => {
   const dayjs = require('dayjs');
 
   return (
-    <div>
+    <div className='card'>
     <Card sx={{ width: 345 }}>
       <CardHeader
-        title={catalog.name}
+       title =  {name}
       />
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-             Создан {dayjs(catalog.created_at).format('DD-MM-YYYY [в] hh:mm')}
+             Создан {dayjs(data).format('DD-MM-YYYY [в] hh:mm')}
           </Typography>
       
       <CardMedia
         component="img"
         height="194"
-        image= "https://static.tildacdn.com/tild6362-3966-4339-b166-643331623235/photo.jpg"
+        image= {image}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {catalog.price}
+          {price}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -42,4 +42,4 @@ export const CardItem = () => {
     </Card>
     </div>
   )
-};
+}

@@ -7,7 +7,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
-
+import Badge from '@mui/material/Badge';
 
 export const Header = () => {
 
@@ -78,7 +78,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
                     alignItems:"center",
                     borderBottom:"1px solid"
                     }}   item xs={2}>
-        <Typography><ShoppingBasketIcon/></Typography>
+        <Typography>
+        <Badge badgeContent={1} color="primary">
+              <ShoppingBasketIcon color="black" />
+          </Badge>
+        </Typography>
         <Typography>Стоимость </Typography>
       </Grid>
       
