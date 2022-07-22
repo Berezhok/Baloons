@@ -2,7 +2,7 @@ import React from 'react';
 import { List } from '../List/list';
 import "./style.css";
 
-export const MainMenu = ({list}) => {
+export const MainMenu = ({list,setFavorite,favorite,basket, setBasket}) => {
   return (
     <div className='menu'>
       <div className='left__menu'>
@@ -13,7 +13,12 @@ export const MainMenu = ({list}) => {
       </div>
       <div className='right__menu'>
             <List 
-            list={list}/>
+            list={list}
+            setFavorite={setFavorite}
+            favorite={favorite}
+            basket={basket}
+            setBasket={setBasket}
+            />
       </div>
     </div>
   )

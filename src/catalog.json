@@ -15,6 +15,7 @@
 "tags": [],
 "updated_at": "",
 "wight": "100 г",
+"status": "love",
 "_id": "1"
 },
 {
@@ -34,6 +35,7 @@
     "tags": [],
     "updated_at": "",
     "wight": "100 г",
+    "status": "children",
     "_id": "2"
     },
     {
@@ -53,6 +55,7 @@
         "tags": [],
         "updated_at": "",
         "wight": "100 г",
+        "status": "",
         "_id": "3"
         }
 

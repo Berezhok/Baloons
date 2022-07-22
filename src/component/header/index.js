@@ -9,9 +9,9 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 
-export const Header = () => {
+export const Header = ({basket,favorite}) => {
 
-const Search = styled('div')(({ theme }) => ({
+  const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -78,11 +78,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
                     alignItems:"center",
                     borderBottom:"1px solid"
                     }}   item xs={2}>
-        <Typography>
-        <Badge badgeContent={1} color="primary">
+        {(basket.length > 0) ?
+      
+        (<Badge badgeContent={basket.length} color="primary">
               <ShoppingBasketIcon color="black" />
-          </Badge>
-        </Typography>
+          </Badge>)
+          :
+          (<Badge badgeContent={"0"} color="primary">
+              <ShoppingBasketIcon color="black" />
+          </Badge>)
+        }
+
         <Typography>Стоимость </Typography>
       </Grid>
       
