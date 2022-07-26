@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./style.css";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { stepConnectorClasses, Typography } from '@mui/material';
+import {Typography } from '@mui/material';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
@@ -11,14 +11,7 @@ import Badge from '@mui/material/Badge';
 
 export const Header = ({basket,favorite,list,cost,setCost}) => {
 
-  list.map((el)=>{
-    if(basket.includes(el._id)){
-      cost += el.price;
-      }});
-
-  useEffect(()=>{
-    setCost(cost);
-  },[]);
+ 
   
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
