@@ -11,7 +11,12 @@ import Badge from '@mui/material/Badge';
 
 export const Header = ({basket,favorite,list,cost,setCost}) => {
 
- 
+  list.map((el)=>{
+    if(basket.includes(el._id)){
+      cost += el.price;
+    }
+  });
+  
   
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
