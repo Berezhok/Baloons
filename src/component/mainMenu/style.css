@@ -1,0 +1,21 @@
+.menu{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.left__menu{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.right__menu{
+   display: flex;
+   justify-content: space-around;
+}
+
+.left__menu button {
+    width:100%;
+    margin: 5px;
+}
