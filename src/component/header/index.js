@@ -9,8 +9,10 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 
-export const Header = ({basket,favorite}) => {
+export const Header = ({basket,favorite,list,cost,setCost}) => {
 
+  
+  
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -89,14 +91,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
           </Badge>)
         }
 
-        <Typography>Стоимость </Typography>
+        <Typography>Стоимость  {cost} </Typography>
       </Grid>
       
         <Grid  item xs={12} style={{display:"flex",
                                     justifyContent:"end",
                                     borderBottom:"1px solid", 
                                     padding:"2px"}}>
-        <Search style={{border:"1px solid"}}>
+          <Search style={{border:"1px solid"}}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -106,6 +108,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
             />
           </Search>
         </Grid>
+        
+        
       </Grid>
     </Box>
     </div>
