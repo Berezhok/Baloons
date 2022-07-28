@@ -7,7 +7,7 @@ export const App = () => {
   const [catalogList , setCatalogList] = useState(catalog);
   const [favorite, setFavorite] = useState(JSON.parse(localStorage.getItem("favorites")) || []);
   const [basket, setBasket] = useState(JSON.parse(localStorage.getItem("basket")) || []);
-  const [cost, setCost] = useState(0);
+  const [cost, setCost] = useState(null);
 
   useEffect(()=>{
       setCatalogList(catalog);
@@ -18,6 +18,7 @@ export const App = () => {
 
   return (
     <div>
+    
       <Header 
       basket={basket}
       list={catalogList}
