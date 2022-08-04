@@ -2,7 +2,7 @@ import React from 'react';
 import { List } from '../List/list';
 import "./style.css";
 
-export const MainMenu = ({list,setFavorite,favorite,basket, setBasket}) => {
+export const MainMenu = ({list,setFavorite,favorite,basket, setBasket, filteredList}) => {
   return (
     <div className='menu'>
       <div className='left__menu'>
@@ -18,6 +18,8 @@ export const MainMenu = ({list,setFavorite,favorite,basket, setBasket}) => {
             favorite={favorite}
             basket={basket}
             setBasket={setBasket}
+            filteredList= {filteredList}
+            
             />
       </div>
     </div>
