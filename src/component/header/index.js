@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import balloonIco from "../img/balloonico.png";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
@@ -6,17 +6,21 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
+import catalog from "../../catalog.json";
 
-export const Header = ({ basket, favorite, list, cost, setCost }) => {
+
+export const Header = ({ basket, list, cost, setCatalogList, searchItem }) => {
+ 
+
+  
+
   list.map((el) => {
     if (basket.includes(el._id)) {
       cost += el.price;
     }
   });
 
-  useEffect(() => {
-    setCost(cost);
-  }, []);
+  
 
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -64,12 +68,12 @@ export const Header = ({ basket, favorite, list, cost, setCost }) => {
     <div>
       <div className="header">
         <div className="ico_and_name">
-          <img src={balloonIco} className="balloon_ico"></img>
+          <img src={balloonIco} alt="dwedwe" className="balloon_ico"></img>
           <div className="sitename">МегаШарики</div>
         </div>
         <div className="search">
-          <Search style={{ border: "1px solid" }}>
-            <SearchIconWrapper>
+          <Search onChange={searchItem} style={{ border: "1px solid" }}>
+            <SearchIconWrapper >
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
