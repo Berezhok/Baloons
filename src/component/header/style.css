@@ -1,4 +1,28 @@
-.header__all{
-    /* background-color: rgb(191, 0, 255); */
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgb(133, 255, 103),rgb(18, 206, 1));
+    padding-top: 15px;
 
+}
+.balloon_ico{
+    width: 80px;
+    margin-top: -20px;
+}
+.ico_and_name{
+    display: flex;
+}
+.sitename {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.badger {
+    margin-right:70px;
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    font-weight: 600;
+    margin-top:10px
 }
